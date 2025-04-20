@@ -6,22 +6,16 @@ This project provides a Docker image based on **Oracle Linux 8**, with:
 - Oracle Instant Client 11.2 installed locally from zip
 - `cx_Oracle` Python library ready to connect to Oracle databases
 
----
-
 ## 📦 Requirements
 
 - Docker installed
 - `instantclient-basic-linux.x64-11.2.0.4.0.zip` in the same folder as the Dockerfile
-
----
 
 ## 🚀 Build the Image
 
 ```bash
 docker build -t python-oracle .
 ```
-
----
 
 ## ▶️ Run the Container
 
@@ -37,8 +31,6 @@ Or run a Python script (assuming `script.py` is in the same directory):
 docker run --rm -v $(pwd):/app -w /app python-oracle python script.py
 ```
 
----
-
 ## 🛠 Environment Variables
 
 Inside the container:
@@ -46,8 +38,6 @@ Inside the container:
 - `ORACLE_HOME`: `/opt/oracle/instantclient_11_2`
 - `LD_LIBRARY_PATH`: set to Oracle library path
 - `python`: points to Python 3 interpreter
-
----
 
 ## 🧪 Test the Connection (Example)
 
@@ -73,8 +63,6 @@ Then run:
 docker run --rm -v $(pwd):/app -w /app python-oracle python test_connection.py
 ```
 
----
-
 ## 📁 Project Structure
 
 ```
@@ -85,14 +73,10 @@ docker run --rm -v $(pwd):/app -w /app python-oracle python test_connection.py
 └── README.md
 ```
 
----
-
 ## 🧾 Notes
 
 - The Oracle client zip is not downloaded during the build, it must be placed manually due to Oracle licensing.
 - You can switch to another Oracle Client version if needed, just update paths and symlinks accordingly.
-
----
 
 ## 📜 License
 
